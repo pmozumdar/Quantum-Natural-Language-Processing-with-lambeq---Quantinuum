@@ -36,4 +36,10 @@ one needs to find a suitable quantum representation of each sentence and a way t
 
 In our experience, it seems the binary cross-entropy loss function works well with tensor-product method and mean squared error loss function fits well with cosnine similarity method. <br> 
 
-&emsp;&emsp;&emsp;&emsp;&emsp; <strong> Accuracy function : </strong> This function comapres the model's final prediction whether the sentence pairs belong to same category or not with the actual truth. To do this we need to convert the model outcome into '0' or '1' by comparing them against a chosen threshold. For the tensor-product method the chosen threshold was 0.5. That means if the 
+&emsp;&emsp;&emsp;&emsp;&emsp; <strong> Accuracy function : </strong> This function comapres the model's final prediction whether the sentence pairs belong to same category or not with the actual truth. To do this we need to convert the model outcome into '0' or '1' by comparing them against a chosen threshold. For the tensor-product method the chosen threshold was 0.5. That means if any of the state in the  final vector for a paired sentence is greater than 0.5, we have considered the prediction is denoting that state. However, for the cosine similarity method the chosen threshold is an angel. In this problem and for the given dataset our chosen threshold is 20 degree. That means if the angular differene bwteen two vectors which belong to a sentence pair is greater than the threshold, the accuracy function decides that the pair are from different category. And if the angular difference is less than 20 degree then  the sentences belong to the same category (either 'food' or 'IT). <br>
+
+&emsp;&emsp;&emsp; 9. Next, we defined a trainer by choosing a particular model (Numpy or Tket), associated backend, a loss function, a optimizer and some other parameters. <br>
+
+&emsp;&emsp;&emsp; 10. We create a train and test dataset while keeping track of sentences belonging to the same pair. We ensure this by not allowing lambeq to shuffle the input list of data. <br>
+
+&emsp;&emsp;&emsp; 11. Finally, we train the model using the train dataset and test the accuracy of the model using the test dataset. <br>
