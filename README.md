@@ -3,8 +3,8 @@ Womanium Quantum Hackathon 2022
 
 <h2> Intro: </h2>
 <h3>Team Name : Ground_State </h3>
-<strong>Team members: Pritom Mozumdar </strong>(Discord ID- Pritom; Github ID- pmozumdar (https://github.com/pmozumdar)<br> 
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; email ID - mozumdar.pritom@gmail.com)<br>
+<strong>Team members: Pritom Mozumdar </strong> (Discord ID- Pritom; Github ID - pmozumdar (https://github.com/pmozumdar); 
+             email ID - mozumdar.pritom@gmail.com)<br>
  Pitch Presenter : Pritom Mozumdar <br>
 
 <h2> Problem Description:</h2> Given pair of sentences either of type 'food' or 'IT' or mixed, the challenge is to write, train and test a simple quantum-natural-language-processing(QNLP) model that can detect whether they belong to the same category or not. In order to solve this problem
