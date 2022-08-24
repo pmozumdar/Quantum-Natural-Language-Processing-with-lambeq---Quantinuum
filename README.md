@@ -18,7 +18,7 @@ one needs to find a suitable quantum representation of each sentence and a way t
 
 &emsp;&emsp;&emsp; 3. <strong> Check and simplify string diagram : </strong>Next, we simply these string diagrams and check whether all of them have been successfully converted to string diagrams. If not we filter them out. <br>
 
-&emsp;&emsp;&emsp; 4. <strong> Creating quantum circuits  : </strong>Using these string diagrams we can create actual quantum circuits using an predfined ansatz. An ansatz maps each wire to a qubit system and each box to a variational quantum circuit. That means an anstaz describes a subroutine consisting of a sequence of gates applied to specific wires. In this problem we have used the 'Instantaneous Quantum Polynomial' ansatz (IQP) anstaz. I have also experimented with a different anstaz which is different from the default lambeq provides IQP anstaz circuit in terms of rotation gates. While creating circuits from sentences we have kept track of sentence pairs. <br>
+&emsp;&emsp;&emsp; 4. <strong> Creating quantum circuits  : </strong>Using these string diagrams we can create actual quantum circuits using an predfined ansatz. An ansatz maps each wire to a qubit system and each box to a variational quantum circuit. That means an anstaz describes a subroutine consisting of a sequence of gates applied to specific wires. In this problem we have used the 'Instantaneous Quantum Polynomial' ansatz (IQP) anstaz. I have also experimented with other anstaze which are different from the default lambeq provided IQP anstaz circuit in terms of rotation gates or number of layers of circuit. While creating circuits from sentences we have kept track of sentence pairs. <br>
 
 &emsp;&emsp;&emsp; 5. <strong> Defining model : </strong>After creating the sentence circuits we are ready to define a model using the circuit diagrams. In this problem we have used a noise free 'NumpyModel' and a noisy 'TketModel' with Aerbackend.  <br>
 
@@ -42,3 +42,16 @@ In our experience, it seems the binary cross-entropy loss function works well wi
 &emsp;&emsp;&emsp; 9. <strong> Classify train and test circuits : </strong>We create a train and test dataset from corresponding circuit diagrams while keeping track of sentences belonging to the same pair. We ensure this by not allowing lambeq to shuffle the input list of data. <br>
 
 &emsp;&emsp;&emsp; 10. <strong>  Train the model and test accuracy : </strong>Finally, we train the model using the train dataset and test the accuracy of the model using the test dataset. <br>
+
+<h2>Description of python files: </h2> <br>
+&emsp;&emsp;&emsp; <strong> checking_lambeq.ipynb </strong> -- notebook to explore the lambeq package to understand the datset and the given task <br> 
+
+&emsp;&emsp;&emsp; <strong> functions.py </strong> -- python file contains all the loss and accuracy functions. <br>
+
+&emsp;&emsp;&emsp; <strong> tensor_product_solution.ipynb </strong>  -- notebook containing a model to solve the given task using tensor product method.<br>
+
+&emsp;&emsp;&emsp; <strong> cosine_similarity_solution.ipynb </strong>  -- notebook containing a model to solve the given task using cosine similarity method. <br>
+
+&emsp;&emsp;&emsp; <strong> Different_ansatz_solution_1.ipynb </strong> -- notebook showing how to create a different anasatz by changing rotation gates in IQPAnsatz and comparing it with default ansatz by checking their effects on the model using same train and test dataset. <br> 
+
+&emsp;&emsp;&emsp; <strong> Different_ansatz_solution_2.ipynb </strong> <br>
