@@ -3,7 +3,7 @@ Womanium Quantum Hackathon 2022
 
 <h2> Intro: </h2>
 <h3>Team Name : Ground_State </h3>
-<strong>Team members: Pritom Mozumdar </strong> (Discord ID- Pritom; Github ID - pmozumdar (https://github.com/pmozumdar); 
+<strong>Team members: Pritom Mozumdar </strong> (Discord ID- Pritom#5410; Github ID - pmozumdar (https://github.com/pmozumdar); 
              email ID - mozumdar.pritom@gmail.com)<br>
  Pitch Presenter : Pritom Mozumdar <br>
 
