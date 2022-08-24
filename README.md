@@ -7,6 +7,8 @@ Womanium Quantum Hackathon 2022
              email ID - mozumdar.pritom@gmail.com)<br>
  Pitch Presenter : Pritom Mozumdar <br>
 
+<br> <strong>In the following text, I first have introduced the problem and then provided a comprehensive description of our proposed solutions. Next, we have summarized the results and given a brief descrition of the python files. </strong><br>
+
 <h2> Problem Description:</h2> Given pair of sentences either of type 'food' or 'IT' or mixed, the challenge is to write, train and test a simple quantum-natural-language-processing(QNLP) model that can detect whether they belong to the same category or not. In order to solve this problem
 one needs to find a suitable quantum representation of each sentence and a way to compare their similarity. <br>
 
@@ -43,8 +45,15 @@ In our experience, it seems the binary cross-entropy loss function works well wi
 
 &emsp;&emsp;&emsp; 10. <strong>  Train the model and test accuracy : </strong>Finally, we train the model using the train dataset and test the accuracy of the model using the test dataset. <br>
 
+<h2> Results: </h2> <br>
+&emsp;&emsp;&emsp; 1. By shuffling the provided dataset, we have created different train and test dataset. Then using differet methods (tenosr product or cosine similarity), the default IQPAnsatz  and different loss fand accuracy functions we have trained and tested the models. Using both the tensor product and cosine similarity method we got test accuracy of around 0.9 on average. <br>
+
+&emsp;&emsp;&emsp; 2. We have created another ansatz by chaing the rotation gates of the default IQPAnstaz in labeq. We have replaced the 'Rx' rotation gates with the 'Ry' rotation gates to form this new ansatz. This new anstaz also perform sufficiently well as the default ansatz. <br>
+
+&emsp;&emsp;&emsp; 3. The third ansatz we have tried, has been created by increasing the number of circuit layers than the default circuit layer of 1. We have tested upto five layers. We would have expected the model to train faster and the accuracy to be better with increased layer of gates. However, it doesn't seems to be the case. <br>
+
 <h2>Description of python files: </h2> <br>
-&emsp;&emsp;&emsp; <strong> checking_lambeq.ipynb </strong> -- notebook to explore the lambeq package to understand the datset and the given task <br> 
+&emsp;&emsp;&emsp; <strong> checking_lambeq.ipynb </strong> -- notebook to explore the lambeq package to understand the datset and the given task.<br> <br>
 
 &emsp;&emsp;&emsp; <strong> functions.py </strong> -- python file contains all the loss and accuracy functions. <br>
 
@@ -54,4 +63,4 @@ In our experience, it seems the binary cross-entropy loss function works well wi
 
 &emsp;&emsp;&emsp; <strong> Different_ansatz_solution_1.ipynb </strong> -- notebook showing how to create a different anasatz by changing rotation gates in IQPAnsatz and comparing it with default ansatz by checking their effects on the model using same train and test dataset. <br> 
 
-&emsp;&emsp;&emsp; <strong> Different_ansatz_solution_2.ipynb </strong> <br>
+&emsp;&emsp;&emsp; <strong> Different_ansatz_solution_2.ipynb </strong> -- notebook showing how to implement another ansatzby changing number of circuit layers and their effects on taining the model using same train and test dataset. <br>
